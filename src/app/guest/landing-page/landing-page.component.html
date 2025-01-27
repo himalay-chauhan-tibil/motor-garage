@@ -10,7 +10,9 @@
     </div>
 
     <div class="action-container ion-text-center ion-padding">
-      <ion-button shape="round" expand="block" color="secondary" (click)="navigateToJoinPage()">Join Now</ion-button>
+      <!-- <ion-button shape="round" expand="block" color="secondary" (click)="navigateToJoinPage()">Join Now</ion-button> -->
+      <app-common-button [label]="'Join Now'" (onButtonClick)="navigateToJoinPage()" [expand]="true"
+        [color]="'secondary'" [shape]="'round'"></app-common-button>
     </div>
   </div>
 </ion-content>

@@ -12,6 +12,7 @@ export class LandingPageComponent {
   constructor(private router: Router) { }
 
   navigateToJoinPage() {
+    console.log('navigateToJoinPage');
     this.router.navigate(['/join-page']);
   }
 }
