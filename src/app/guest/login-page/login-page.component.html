@@ -1,3 +1,85 @@
-<p>
-  login-page works!
-</p>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/join-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="login-page-wrapper" style="background-color: white;">
+    <ion-grid>
+
+      <ion-row>
+        <br>
+        <br>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text color="primary">
+            <h2> <b>Log in to Motor Garage</b></h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text color="secondary">Welcome back! Sign in using your social account or email to continue
+            us.</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <br>
+        <br>
+      </ion-row>
+      <ion-row class="ion-justify-content-around my-10">
+        <ion-col class="ion-text-center" size-auto><ion-icon size="large" color="dark"
+            name="logo-facebook"></ion-icon></ion-col>
+        <ion-col class="ion-text-center" size-auto><ion-icon size="large" color="dark"
+            name="logo-google"></ion-icon></ion-col>
+        <ion-col class="ion-text-center" size-auto><ion-icon size="large" color="dark"
+            name="logo-apple"></ion-icon></ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <div class="or-separator">
+          <hr>
+          <span>OR</span>
+          <hr>
+        </div>
+      </ion-row>
+      <ion-item color="light">
+        <ion-input label="Email" labelPlacement="floating" placeholder="Email"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+
+      <ion-item color="light">
+        <ion-input label="Password" labelPlacement="floating" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <!-- Spacer to push button to bottom -->
+      <ion-row class="ion-margin-top">
+        <ion-col size="12">
+          <div class="spacer"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <app-common-button [label]="'Log in'" [expand]="'block'" [color]="'dark'"
+            [shape]="'round'"></app-common-button>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text><a href="#" style="text-decoration: none;">Forgot password?</a></ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

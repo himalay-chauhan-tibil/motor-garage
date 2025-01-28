@@ -13,6 +13,6 @@ export class LandingPageComponent {
 
   navigateToJoinPage() {
     console.log('navigateToJoinPage');
-    this.router.navigate(['/join-page']);
+    this.router.navigate(['/join']);
   }
 }

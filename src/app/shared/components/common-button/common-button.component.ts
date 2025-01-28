@@ -11,7 +11,7 @@ export class CommonButtonComponent {
   @Input()
   label!: string;
   @Input()
-  expand: boolean = false;
+  expand!: string;
   @Input()
   color!: string;
   @Input()

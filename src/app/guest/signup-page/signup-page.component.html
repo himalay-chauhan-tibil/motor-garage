@@ -1,3 +1,78 @@
-<p>
-  signup-page works!
-</p>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/join-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="login-page-wrapper" style="background-color: white;">
+    <ion-grid>
+
+      <ion-row>
+        <br>
+        <br>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text color="primary">
+            <h2> <b>Sign up with Email</b></h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text color="secondary">Connect with car enthusiasts around you !</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <br>
+        <br>
+      </ion-row>
+      <ion-item color="light">
+        <ion-input label="Your name" labelPlacement="floating" placeholder="Your name"></ion-input>
+      </ion-item>
+      <br>
+
+      <ion-item color="light">
+        <ion-input label="Your email" labelPlacement="floating" placeholder="Your email"></ion-input>
+      </ion-item>
+      <br>
+
+      <ion-item color="light">
+        <ion-input label="Password" labelPlacement="floating" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <br>
+
+      <ion-item color="light">
+        <ion-input label="Confirm Password" labelPlacement="floating" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+
+      <!-- Spacer to push button to bottom -->
+      <ion-row class="ion-margin-top">
+        <ion-col size="12">
+          <div class="spacer"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <app-common-button [label]="'Create an account'" [expand]="'block'" [color]="'dark'"
+            [shape]="'round'"></app-common-button>
+        </ion-col>
+        <ion-col size="12" class="ion-text-center">
+          <ion-text><a routerLink="/login" style="text-decoration: none;">Login</a></ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
