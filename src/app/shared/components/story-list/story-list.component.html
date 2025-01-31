@@ -1,0 +1,13 @@
+<ion-infinite-scroll [scrollLeft]="true" class="story-scroll">
+    <div class="story-container" *ngFor="let story of stories; let i = index">
+        <div class="story-avatar">
+            <ion-avatar>
+                <img [src]="story.image" alt="Story Avatar">
+            </ion-avatar>
+            <div class="story-border"></div>
+            <ion-icon *ngIf="i === 0" name="add-circle" class="add-icon">
+            </ion-icon>
+            <span class="username">{{ story.username }}</span>
+        </div>
+    </div>
+</ion-infinite-scroll>

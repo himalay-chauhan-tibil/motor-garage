@@ -1,0 +1,22 @@
+app-header {
+    box-shadow: none;
+
+    ion-title {
+        text-align: center;
+    }
+
+    ion-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    ion-toolbar {
+        --background: linear-gradient(to bottom, #03055B, #03055B);
+    }
+
+    .header-md {
+        box-shadow: none;
+    }
+
+    color: white;
+}

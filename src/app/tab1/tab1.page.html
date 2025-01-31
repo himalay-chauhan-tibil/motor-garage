@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tab 1
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="dark-blue-background"
+  style="--background: linear-gradient(to bottom, #03055B, #03055B);">
+  <div class="sticky-header">
+    <app-header></app-header>
+    <app-story-list></app-story-list>
+  </div>
+  <div class="chat-list-container">
+    <app-chat-list></app-chat-list>
+  </div>
 </ion-content>

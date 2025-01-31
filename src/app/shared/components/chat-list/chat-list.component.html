@@ -1,0 +1,20 @@
+<ion-list class="chat-list-container">
+    <ion-item *ngFor="let chat of chats">
+        <ion-avatar slot="start">
+            <img [src]="chat.avatar" alt="Avatar">
+
+            <!-- Online/Offline Indicator -->
+            <div class="online-indicator" [ngClass]="{'online': chat.isOnline}"></div>
+        </ion-avatar>
+
+        <ion-label>
+            <h2><b>{{ chat.userName }}</b></h2>
+            <p>{{ 'Test' }}</p>
+        </ion-label>
+
+        <div slot="end" class="end-info">
+            <p>{{ chat.messageTime }}</p>
+            <ion-badge *ngIf="chat.hasNotification" color="danger"></ion-badge>
+        </div>
+    </ion-item>
+</ion-list>

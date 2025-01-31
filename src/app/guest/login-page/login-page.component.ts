@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -9,8 +10,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
+
+  navigateToHomePage() {
+    this.router.navigate(['home/tabs/tab1']);
+  }
 
 }

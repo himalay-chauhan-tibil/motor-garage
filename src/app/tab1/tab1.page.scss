@@ -1,0 +1,20 @@
+app-tab1 {
+    .dark-blue-background {
+        background: linear-gradient(to bottom, #03055B, #03055B);
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .sticky-header {
+        position: sticky;
+        top: 0;
+        background-color: #03055B;
+        z-index: 1;
+    }
+
+    .chat-list-container {
+        height: calc(100vh - 200px);
+        /* Adjust the height as needed */
+        overflow-y: auto;
+    }
+}
