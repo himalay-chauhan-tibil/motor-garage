@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      <div class="header-content">
+        <ion-avatar class="message-avatar">
+          <img [src]="'https://i.pravatar.cc/40?img=12'" alt="Group Avatar">
+        </ion-avatar>
+        <div class="group-info">
+          <h2>{{ chatData?.chatName }}</h2>
+          <p>{{ chatData?.members?.length }} Members</p>
+        </div>
+      </div>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="call-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="videocam-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- <ion-content [scrollEvents]="true" fullscreen>
+  <div class="messages-container">
+    <div *ngFor="let message of messages"
+      [ngClass]="{'current-user': message.senderId === currentUserId, 'other-user': message.senderId !== currentUserId}"
+      class="message-wrapper">
+
+      <ion-avatar class="message-avatar">
+        <img [src]="message.senderAvatar" alt="{{message.senderName}} Avatar">
+      </ion-avatar>
+
+      <div class="message-content">
+        <h3 class="sender-name">{{message.senderName}}</h3>
+        <div class="message-text">
+          <p>{{message.text}}</p>
+          <img *ngIf="message.image" [src]="message.image" alt="Shared Image">
+        </div>
+        <span class="message-time">{{message.time}}</span>
+      </div>
+    </div>
+  </div>
+</ion-content> -->
+<ion-content [scrollEvents]="true" fullscreen *ngIf="chatData">
+  <div class="messages-container">
+    <app-message *ngFor="let message of messages" [message]="message"
+      [isCurrentUser]="message.senderId === currentUserId">
+    </app-message>
+  </div>
+</ion-content>
+
+<ion-spinner *ngIf="!chatData" name="crescent"></ion-spinner>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="attach-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="mic-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-input type="text" placeholder="Type a message..." [(ngModel)]="newMessage"
+      (keydown)="handleKeyDown($event)"></ion-input>
+  </ion-toolbar>
+</ion-footer>

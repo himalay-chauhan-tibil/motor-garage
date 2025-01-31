@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './components/header/header.component';
 import { ChatListComponent } from './components/chat-list/chat-list.component';
 import { StoryListComponent } from './components/story-list/story-list.component';
+import { MessageComponent } from './components/message/message.component';
+import { ChatService } from './services/chat.service';
 
 
 
@@ -13,7 +15,8 @@ import { StoryListComponent } from './components/story-list/story-list.component
     CommonButtonComponent,
     HeaderComponent,
     ChatListComponent,
-    StoryListComponent
+    StoryListComponent,
+    MessageComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,9 @@ import { StoryListComponent } from './components/story-list/story-list.component
     CommonButtonComponent,
     HeaderComponent,
     ChatListComponent,
-    StoryListComponent
-  ]
+    StoryListComponent,
+    MessageComponent
+  ],
+  providers: [ChatService]
 })
 export class SharedModule { }

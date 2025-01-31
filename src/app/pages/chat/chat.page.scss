@@ -1,0 +1,127 @@
+app-chat {
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+
+    ion-avatar {
+        margin-right: 10px;
+    }
+
+    .group-info h2 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .group-info p {
+        margin: 0;
+        font-size: 12px;
+        color: gray;
+    }
+
+    ion-toolbar {
+        --background: #fff;
+    }
+
+    ion-icon {
+        font-size: 24px;
+    }
+
+    .messages-container {
+        padding: 10px;
+    }
+
+    .message-wrapper {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .message-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .message-content {
+        max-width: calc(100% - 80px);
+        /* Adjust based on avatar size and margins */
+    }
+
+
+    .sender-name {
+        margin: 0 0 5px 0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .message-text {
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        word-wrap: break-word;
+    }
+
+    .message-text p {
+        margin: 0;
+    }
+
+    .message-text img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    .message-time {
+        font-size: 11px;
+        color: gray;
+        margin-top: 3px;
+    }
+
+    .current-user {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
+    .current-user .message-text {
+        background-color: #dcf8c6;
+        /* Light green */
+    }
+
+    .current-user .message-avatar {
+        margin-left: 10px;
+    }
+
+    .other-user .message-avatar {
+        margin-right: 10px;
+    }
+
+    ion-footer {
+        --background: #fff;
+    }
+
+    ion-toolbar {
+        align-items: center;
+    }
+
+    ion-input {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    ion-icon {
+        font-size: 24px;
+    }
+
+    ion-footer.footer-md {
+        --box-shadow: none;
+        box-shadow: none;
+    }
+
+    /* ion-input {
+        background-color: #f7f7f7;
+        border-radius: 10px;
+    } */
+
+}

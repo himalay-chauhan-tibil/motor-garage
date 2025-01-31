@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class TabsPage {
+  tabChanged($event: Event) {
+    console.log('Tab changed:', ($event as CustomEvent).detail.tab);
+    console.log('selectedTab: ', this.selectedTab);
+  }
+  selectedTab = 'tab1';
 
-  constructor() {}
+  constructor() { }
 
 }

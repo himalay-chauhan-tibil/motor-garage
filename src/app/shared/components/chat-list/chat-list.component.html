@@ -1,5 +1,5 @@
 <ion-list class="chat-list-container">
-    <ion-item *ngFor="let chat of chats">
+    <ion-item *ngFor="let chat of chats" (click)="openChat(chat)">
         <ion-avatar slot="start">
             <img [src]="chat.avatar" alt="Avatar">
 
