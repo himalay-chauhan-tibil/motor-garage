@@ -1,0 +1,15 @@
+<div class="car-details">
+  <div class="title-row">
+    <h1>{{ carModel }}</h1>
+    <div class="rating">
+      <ion-icon name="star" *ngFor="let star of stars"></ion-icon>
+      <span>{{ rating }}/5</span>
+    </div>
+  </div>
+  <p class="price">${{ price }}</p>
+  <p class="description">
+    {{ showFullDescription ? carDescription : (carDescription | slice:0:150) + '...' }}
+    <a *ngIf="!showFullDescription" (click)="toggleDescription()">Read More</a>
+    <a *ngIf="showFullDescription" (click)="toggleDescription()">Read Less</a>
+  </p>
+</div>

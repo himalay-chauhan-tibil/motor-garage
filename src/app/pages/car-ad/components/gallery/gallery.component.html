@@ -1,0 +1,15 @@
+<div class="gallery-container">
+  <div class="main-image">
+    <img [src]="selectedImage" alt="Car Image">
+  </div>
+
+  <div class="thumbnail-slider">
+    <div #swiper class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let image of images" (click)="selectImage(image)">
+          <img [src]="image" [class.selected]="image === selectedImage" alt="Thumbnail">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

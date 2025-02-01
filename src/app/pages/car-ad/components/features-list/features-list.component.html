@@ -1,0 +1,8 @@
+<div class="features-grid">
+  <div class="feature-item" *ngFor="let feature of features">
+    <ion-item lines="none">
+      <ion-checkbox slot="start" [checked]="true" disabled></ion-checkbox>
+      <ion-label>{{ feature }}</ion-label>
+    </ion-item>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+app-car-details {
+    .car-details {
+        padding: 16px;
+
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .rating {
+                display: flex;
+                align-items: center;
+
+                ion-icon {
+                    color: #ffd700;
+                    margin-right: 2px;
+                }
+
+                span {
+                    font-size: 14px;
+                    margin-left: 4px;
+                    color: #666;
+                }
+            }
+        }
+
+        .price {
+            color: #3880ff;
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #333;
+
+            a {
+                color: #3880ff;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
